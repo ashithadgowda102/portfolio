@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashitha D. Gowda | Java Full Stack Developer & Flutter Specialist</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Ashitha D. Gowda - Java Full Stack Developer, Flutter Developer, and Technical Trainer. Specializing in high-performance web, mobile apps, and technical mentorship.">
+  <meta name="keywords" content="Ashitha D Gowda, Java Full Stack Developer, Flutter Developer, Technical Trainer, Python, Spring Boot, Portfolio, Software Engineer">
+  <meta name="author" content="Ashitha D. Gowda">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Ashitha D. Gowda | Software Developer & Technical Trainer">
+  <meta property="og:description" content="Explore projects, skills, and certifications in Java Full Stack, Flutter, and Python.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/ashitha-profile.jpeg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%2310b981'>&lt;/&gt;</text></svg>">
+</head>
+<body>
+
+  <!-- Background Canvas for Interactive Developer Particles -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" aria-label="Ashitha D Gowda Home">
+        <span class="brand-code">&lt;</span>
+        <span class="brand-name">Ashitha</span>
+        <span class="brand-dot">.</span>
+        <span class="brand-title">dev</span>
+        <span class="brand-code">/&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active"><span class="nav-num">01.</span>Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link"><span class="nav-num">02.</span>About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link"><span class="nav-num">03.</span>Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link"><span class="nav-num">04.</span>Projects</a></li>
+          <li class="nav-item"><a href="#certifications" class="nav-link"><span class="nav-num">05.</span>Certifications</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link"><span class="nav-num">06.</span>Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle, Resume, Mobile Toggle) -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Resume Download CTA -->
+        <a href="assets/Ashitha_D_Gowda_Resume.pdf" download="Ashitha_D_Gowda_Resume.pdf" class="btn btn-outline-emerald nav-resume-btn" id="navResumeBtn">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Resume</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-grid container">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <span class="pulse-indicator"></span>
+            <span class="badge-text">Available for Full-Time Roles & Training</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-up">
+            <span class="greeting">Hello World, I'm</span>
+            <span class="highlight-name">Ashitha D. Gowda</span>
+          </h1>
+
+          <!-- Dynamic Typing Terminal Line -->
+          <div class="typing-container animate-fade-up delay-1">
+            <span class="terminal-prefix">&gt;</span>
+            <span class="typing-text" id="typingText">Java Full Stack Developer</span>
+            <span class="cursor-blink">|</span>
+          </div>
+
+          <p class="hero-description animate-fade-up delay-2">
+            Engineering robust backends, sleek cross-platform mobile apps with <strong>Flutter</strong>, 
+            and scalable web systems with <strong>Java</strong> &amp; <strong>Python</strong>. 
+            Passionate about writing elegant code and empowering the next generation of engineers through technical training.
+          </p>
+
+          <!-- Call To Action Buttons -->
+          <div class="hero-cta-group animate-fade-up delay-3">
+            <a href="#contact" class="btn btn-primary-emerald">
+              <span>Let's Connect</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="assets/Ashitha_D_Gowda_Resume.pdf" download="Ashitha_D_Gowda_Resume.pdf" class="btn btn-secondary-glow" id="heroResumeBtn">
+              <i class="fa-solid fa-download"></i>
+              <span>Download Resume</span>
+            </a>
+            <a href="#projects" class="btn btn-ghost">
+              <i class="fa-solid fa-code"></i>
+              <span>Explore Projects</span>
+            </a>
+          </div>
+
+          <!-- Hero Social Links & Quick Contact -->
+          <div class="hero-socials animate-fade-up delay-4">
+            <span class="social-label">Find me on:</span>
+            <div class="social-icons">
+              <a href="mailto:ashithadgowda102@gmail.com" class="social-link" title="Email Ashitha" aria-label="Send Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://wa.me/918792539013" target="_blank" rel="noopener noreferrer" class="social-link" title="Chat on WhatsApp" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="tel:+918792539013" class="social-link" title="Call Ashitha" aria-label="Phone Call">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Profile Showcase -->
+        <div class="hero-visual animate-fade-left">
+          <div class="profile-card-wrapper">
+            <!-- Glow background effect -->
+            <div class="card-glow-mesh"></div>
+
+            <div class="developer-profile-card">
+              <!-- Terminal Header Bar -->
+              <div class="terminal-bar">
+                <div class="terminal-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="terminal-title">ashitha@developer:~/portfolio</div>
+                <div class="terminal-status"><i class="fa-solid fa-shield-halved"></i> Active</div>
+              </div>
+
+              <!-- Profile Image Container -->
+              <div class="profile-image-container">
+                <div class="image-border-glow">
+                  <img src="assets/ashitha-profile.jpeg" alt="Ashitha D. Gowda - Professional Portrait" class="profile-img" loading="eager">
+                </div>
+                
+                <!-- Floating Tech Badges -->
+                <div class="floating-badge badge-top-right">
+                  <i class="fa-brands fa-java text-java"></i>
+                  <span>Java Full Stack</span>
+                </div>
+
+                <div class="floating-badge badge-bottom-left">
+                  <i class="fa-solid fa-mobile-screen-button text-flutter"></i>
+                  <span>Flutter Dev</span>
+                </div>
+
+                <div class="floating-badge badge-bottom-right">
+                  <i class="fa-brands fa-python text-python"></i>
+                  <span>Python Core</span>
+                </div>
+              </div>
+
+              <!-- Terminal Code Snippet Footer -->
+              <div class="terminal-body">
+                <p class="code-line"><span class="code-kw">const</span> <span class="code-var">engineer</span> = {</p>
+                <p class="code-line indent"><span class="code-prop">name:</span> <span class="code-str">"Ashitha D. Gowda"</span>,</p>
+                <p class="code-line indent"><span class="code-prop">cgpa:</span> <span class="code-num">8.1</span> <span class="code-comment">// AIT College</span>,</p>
+                <p class="code-line indent"><span class="code-prop">readyToInnovate:</span> <span class="code-bool">true</span></p>
+                <p class="code-line">};</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About section">
+        <span class="mouse">
+          <span class="wheel"></span>
+        </span>
+        <span class="scroll-text">Explore</span>
+      </a>
+    </section>
+
+    <!-- KEY STATS COUNTER BAR -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="8.1" data-decimal="1">8.1</div>
+            <div class="stat-label">Academic CGPA (AIT)</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="15" data-suffix="+">15+</div>
+            <div class="stat-label">Projects &amp; Solutions</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="100" data-suffix="+">100+</div>
+            <div class="stat-label">Minds Mentored &amp; Trained</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">
+            <i class="fa-solid fa-code-commit"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+            <div class="stat-label">Dedication to Clean Code</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 01. WHO I AM</span>
+          <h2 class="section-title">About <span class="text-accent">Myself</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Bio & Core Pillars -->
+          <div class="about-bio">
+            <h3 class="about-heading">
+              Bridging robust software engineering with pedagogical excellence.
+            </h3>
+            
+            <p class="about-text">
+              I am an enthusiastic <strong>Software Developer</strong> and <strong>Technical Trainer</strong> with an academic foundation in 
+              <strong>Electronics and Communication Engineering</strong> at <em>Adichunchanagiri Institute of Technology, Chikkamagaluru</em>, 
+              maintaining a strong academic standing of <strong>8.1 CGPA</strong>.
+            </p>
+
+            <p class="about-text">
+              My engineering philosophy revolves around building scalable, maintainable architectures. 
+              Whether it's orchestrating enterprise backends with <strong>Java</strong>, building seamless cross-platform mobile apps with 
+              <strong>Flutter &amp; Dart</strong>, or formulating efficient algorithmic solutions in <strong>Python</strong>, 
+              I strive for clean, readable code and stellar user experiences.
+            </p>
+
+            <p class="about-text">
+              As a <strong>Technical Trainer</strong>, I take pride in mentoring fellow developers, demystifying programming paradigms, 
+              and conducting practical workshops that transform foundational theory into production-ready software solutions.
+            </p>
+
+            <!-- Key Developer Competency Cards -->
+            <div class="competencies-grid">
+              <div class="competency-card">
+                <div class="comp-icon"><i class="fa-solid fa-server"></i></div>
+                <div class="comp-content">
+                  <h4>Backend Architecture</h4>
+                  <p>Java, Spring Boot, RESTful APIs &amp; Relational Databases</p>
+                </div>
+              </div>
+
+              <div class="competency-card">
+                <div class="comp-icon"><i class="fa-solid fa-mobile"></i></div>
+                <div class="comp-content">
+                  <h4>Cross-Platform Mobile</h4>
+                  <p>Flutter, Dart, Clean Architecture &amp; State Management</p>
+                </div>
+              </div>
+
+              <div class="competency-card">
+                <div class="comp-icon"><i class="fa-solid fa-chalkboard-teacher"></i></div>
+                <div class="comp-content">
+                  <h4>Technical Training</h4>
+                  <p>Workshops, Code Reviews, Logic Building &amp; Mentorship</p>
+                </div>
+              </div>
+
+              <div class="competency-card">
+                <div class="comp-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="comp-content">
+                  <h4>Algorithmic Thinking</h4>
+                  <p>Python problem solving, Data Structures &amp; OOPs</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Info Bar -->
+            <div class="about-meta-list">
+              <div class="meta-item">
+                <span class="meta-label"><i class="fa-solid fa-location-dot"></i> Location:</span>
+                <span class="meta-val">Chikkamagaluru, Karnataka, India</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                <a href="mailto:ashithadgowda102@gmail.com" class="meta-val link-emerald">ashithadgowda102@gmail.com</a>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label"><i class="fa-solid fa-phone"></i> Phone:</span>
+                <a href="tel:+918792539013" class="meta-val link-emerald">+91 8792539013</a>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label"><i class="fa-solid fa-language"></i> Languages:</span>
+                <span class="meta-val">English, Kannada</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Code Terminal Card -->
+          <div class="about-interactive">
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="terminal-filename">AshithaProfile.java</div>
+                <button class="copy-code-btn" id="copyCodeBtn" title="Copy snippet">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+              <div class="terminal-code">
+                <pre><code><span class="code-kw">package</span> <span class="code-var">com.ashitha.portfolio</span>;
+
+<span class="code-kw">public class</span> <span class="code-fn">AshithaDGowda</span> <span class="code-kw">implements</span> <span class="code-fn">Developer</span>, <span class="code-fn">Trainer</span> {
+    <span class="code-kw">private final String</span> name = <span class="code-str">"Ashitha D. Gowda"</span>;
+    <span class="code-kw">private final String</span> degree = <span class="code-str">"B.E. in ECE"</span>;
+    <span class="code-kw">private final String</span> institution = <span class="code-str">"AIT Chikkamagaluru"</span>;
+    <span class="code-kw">private final double</span> cgpa = <span class="code-num">8.1</span>;
+
+    <span class="code-kw">public String[]</span> getCoreStack() {
+        <span class="code-kw">return new String[]</span> {
+            <span class="code-str">"Java / Spring Boot"</span>,
+            <span class="code-str">"Flutter / Dart"</span>,
+            <span class="code-str">"Python Programming"</span>,
+            <span class="code-str">"HTML5 / CSS3 / JavaScript"</span>,
+            <span class="code-str">"MySQL & REST APIs"</span>
+        };
+    }
+
+    <span class="code-kw">public void</span> conductTraining() {
+        System.out.println(<span class="code-str">"Mentoring students in clean code & problem solving!"</span>);
+    }
+
+    <span class="code-kw">public boolean</span> isOpenForOpportunity() {
+        <span class="code-kw">return true</span>; <span class="code-comment">// Let's build impactful software</span>
+    }
+}</code></pre>
+              </div>
+            </div>
+
+            <!-- Education Highlight Card -->
+            <div class="education-highlight-card">
+              <div class="edu-icon"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="edu-details">
+                <span class="edu-badge">2025 – 2029</span>
+                <h4 class="edu-title">Bachelor of Engineering (B.E.)</h4>
+                <p class="edu-sub">Electronics &amp; Communication Engineering</p>
+                <p class="edu-inst">Adichunchanagiri Institute of Technology, Chikkamagaluru</p>
+                <div class="edu-cgpa">
+                  <i class="fa-solid fa-award"></i> CGPA: <strong>8.1 / 10</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">// 02. TECHNICAL PROFICIENCY</span>
+          <h2 class="section-title">Skills &amp; <span class="text-accent">Technologies</span></h2>
+          <div class="section-line center"></div>
+          <p class="section-subtitle">
+            A versatile toolkit spanning backend systems, mobile engineering, web technologies, and technical training.
+          </p>
+        </div>
+
+        <!-- Skill Filters -->
+        <div class="skill-filter-tabs" role="tablist">
+          <button class="filter-tab active" data-filter="all">All Skills</button>
+          <button class="filter-tab" data-filter="backend">Backend &amp; Java</button>
+          <button class="filter-tab" data-filter="mobile">Mobile &amp; Flutter</button>
+          <button class="filter-tab" data-filter="frontend">Frontend &amp; Web</button>
+          <button class="filter-tab" data-filter="tools">Languages &amp; Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skillsGrid">
+          
+          <!-- Java -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-header">
+              <div class="skill-icon-box java-bg">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">Java</h3>
+                <span class="skill-level">Full Stack Core</span>
+              </div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <p class="skill-desc">Core Java, OOPs, Collections Framework, Multithreading, Exception Handling &amp; JDBC.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="90"></div>
+            </div>
+            <div class="skill-tags">
+              <span>OOPs</span>
+              <span>Collections</span>
+              <span>Java 17+</span>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-header">
+              <div class="skill-icon-box python-bg">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">Python</h3>
+                <span class="skill-level">Algorithms &amp; Scripting</span>
+              </div>
+              <span class="skill-pct">92%</span>
+            </div>
+            <p class="skill-desc">Problem solving, logical implementation, data structures, automation scripts, and academic engineering projects.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="92"></div>
+            </div>
+            <div class="skill-tags">
+              <span>Data Structures</span>
+              <span>Automation</span>
+              <span>Logic Building</span>
+            </div>
+          </div>
+
+          <!-- Flutter -->
+          <div class="skill-card" data-category="mobile">
+            <div class="skill-header">
+              <div class="skill-icon-box flutter-bg">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">Flutter &amp; Dart</h3>
+                <span class="skill-level">Mobile App Dev</span>
+              </div>
+              <span class="skill-pct">88%</span>
+            </div>
+            <p class="skill-desc">Building cross-platform iOS &amp; Android apps, custom UI widgets, State Management (Provider/Bloc), and REST integration.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="88"></div>
+            </div>
+            <div class="skill-tags">
+              <span>Cross-Platform</span>
+              <span>State Management</span>
+              <span>Material UI</span>
+            </div>
+          </div>
+
+          <!-- HTML5 -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-header">
+              <div class="skill-icon-box html-bg">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">HTML5</h3>
+                <span class="skill-level">Semantic Web</span>
+              </div>
+              <span class="skill-pct">95%</span>
+            </div>
+            <p class="skill-desc">Semantic document structuring, accessibility (a11y), SEO optimization, and clean DOM hierarchy.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="95"></div>
+            </div>
+            <div class="skill-tags">
+              <span>Semantic</span>
+              <span>SEO</span>
+              <span>Accessibility</span>
+            </div>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-header">
+              <div class="skill-icon-box css-bg">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">CSS3 &amp; Responsive UI</h3>
+                <span class="skill-level">Modern Styling</span>
+              </div>
+              <span class="skill-pct">92%</span>
+            </div>
+            <p class="skill-desc">CSS Grid, Flexbox, keyframe animations, glassmorphism, modern custom properties, and responsive design systems.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="92"></div>
+            </div>
+            <div class="skill-tags">
+              <span>Grid / Flexbox</span>
+              <span>Keyframes</span>
+              <span>Dark / Light Themes</span>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-header">
+              <div class="skill-icon-box js-bg">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">JavaScript (ES6+)</h3>
+                <span class="skill-level">Dynamic Web Logic</span>
+              </div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <p class="skill-desc">ES6+ syntax, asynchronous programming, Promises, Fetch API, DOM manipulation, and interactive client workflows.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="85"></div>
+            </div>
+            <div class="skill-tags">
+              <span>ES6+</span>
+              <span>Async/Await</span>
+              <span>DOM Manipulation</span>
+            </div>
+          </div>
+
+          <!-- Spring Boot -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-header">
+              <div class="skill-icon-box spring-bg">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">Spring Boot</h3>
+                <span class="skill-level">Enterprise REST APIs</span>
+              </div>
+              <span class="skill-pct">82%</span>
+            </div>
+            <p class="skill-desc">Spring MVC, dependency injection, RESTful controller architecture, application security fundamentals, and JPA/Hibernate.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="82"></div>
+            </div>
+            <div class="skill-tags">
+              <span>REST APIs</span>
+              <span>Spring Data JPA</span>
+              <span>MVC</span>
+            </div>
+          </div>
+
+          <!-- MySQL & Databases -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-header">
+              <div class="skill-icon-box sql-bg">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">MySQL &amp; Relational DB</h3>
+                <span class="skill-level">Data Modeling</span>
+              </div>
+              <span class="skill-pct">86%</span>
+            </div>
+            <p class="skill-desc">Schema design, normalization, complex joins, indexing, query optimization, and CRUD operations for robust persistence.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="86"></div>
+            </div>
+            <div class="skill-tags">
+              <span>Complex Queries</span>
+              <span>Normalization</span>
+              <span>Indexing</span>
+            </div>
+          </div>
+
+          <!-- Git & Version Control -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-header">
+              <div class="skill-icon-box git-bg">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">Git &amp; GitHub</h3>
+                <span class="skill-level">Version Control</span>
+              </div>
+              <span class="skill-pct">89%</span>
+            </div>
+            <p class="skill-desc">Branching models, semantic commit conventions, pull request workflows, merge conflict resolution, and collaborative repo management.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="89"></div>
+            </div>
+            <div class="skill-tags">
+              <span>Branching</span>
+              <span>CI/CD Basics</span>
+              <span>Code Review</span>
+            </div>
+          </div>
+
+          <!-- Technical Training & Mentorship -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-header">
+              <div class="skill-icon-box trainer-bg">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-title">Technical Training</h3>
+                <span class="skill-level">Pedagogy &amp; Mentorship</span>
+              </div>
+              <span class="skill-pct">94%</span>
+            </div>
+            <p class="skill-desc">Concept breakdown, curriculum formulation, interactive live coding, debugging workshops, and mentoring novice programmers.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-progress="94"></div>
+            </div>
+            <div class="skill-tags">
+              <span>Concept Simplification</span>
+              <span>Workshops</span>
+              <span>Mentoring</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Technical Trainer Spotlight Banner -->
+        <div class="trainer-spotlight-banner">
+          <div class="spotlight-content">
+            <div class="spotlight-badge">
+              <i class="fa-solid fa-certificate"></i>
+              <span>Trainer Spotlight</span>
+            </div>
+            <h3 class="spotlight-title">Passionate About Cultivating Technical Talent</h3>
+            <p class="spotlight-desc">
+              Beyond individual code authorship, I specialize in structuring workshops, conducting deep-dive 
+              code reviews, and simplifying complex data structures &amp; OOP concepts for students and aspiring engineers.
+            </p>
+          </div>
+          <div class="spotlight-actions">
+            <a href="#contact" class="btn btn-primary-emerald">
+              <span>Book a Training Session</span>
+              <i class="fa-solid fa-calendar-check"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">// 03. PRACTICAL WORK</span>
+          <h2 class="section-title">Featured <span class="text-accent">Projects</span></h2>
+          <div class="section-line center"></div>
+          <p class="section-subtitle">
+            A showcase of software solutions, full-stack applications, and cross-platform mobile apps.
+          </p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filter-tabs">
+          <button class="proj-tab active" data-proj-filter="all">All Projects</button>
+          <button class="proj-tab" data-proj-filter="fullstack">Java Full Stack</button>
+          <button class="proj-tab" data-proj-filter="flutter">Flutter Apps</button>
+          <button class="proj-tab" data-proj-filter="python">Python &amp; Engineering</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1: Java Full Stack Campus Portal -->
+          <article class="project-card" data-proj-category="fullstack">
+            <div class="project-window-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="project-type-tag">Java Full Stack</span>
+            </div>
+            <div class="project-thumbnail-wrapper">
+              <div class="project-mockup java-mockup">
+                <div class="mockup-code-header">
+                  <i class="fa-solid fa-server"></i>
+                  <span>EduStream-API / SpringBoot</span>
+                </div>
+                <div class="mockup-code-body">
+                  <code>@RestController<br>@RequestMapping("/api/v1/students")<br>public class StudentController { ... }</code>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-top">
+                <span class="project-year">2026</span>
+                <span class="featured-badge">Featured</span>
+              </div>
+              <h3 class="project-title">EduSphere - Smart Academic &amp; Campus Portal</h3>
+              <p class="project-desc">
+                An enterprise web portal built with <strong>Java, Spring Boot, and MySQL</strong>. 
+                Features role-based access control (Admin, Professor, Student), automated grade report generation, 
+                course enrollment workflows, and responsive dashboard built with HTML5/CSS3.
+              </p>
+              <div class="project-tech-stack">
+                <span>Java 17</span>
+                <span>Spring Boot</span>
+                <span>MySQL</span>
+                <span>REST APIs</span>
+                <span>HTML5/CSS3</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-proj-detail" data-project="edusphere">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-proj-link" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#contact" class="btn-proj-link live" title="Request Live Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Flutter Habit & Wellness Tracker -->
+          <article class="project-card" data-proj-category="flutter">
+            <div class="project-window-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="project-type-tag">Flutter &amp; Dart</span>
+            </div>
+            <div class="project-thumbnail-wrapper">
+              <div class="project-mockup flutter-mockup">
+                <div class="mockup-phone-frame">
+                  <div class="phone-notch"></div>
+                  <div class="phone-screen">
+                    <div class="phone-card-preview">
+                      <i class="fa-solid fa-bolt-lightning text-accent"></i>
+                      <span>Streak: 21 Days 🔥</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-top">
+                <span class="project-year">2026</span>
+                <span class="featured-badge">Mobile App</span>
+              </div>
+              <h3 class="project-title">HabitPulse - Cross-Platform Habit &amp; Wellness Tracker</h3>
+              <p class="project-desc">
+                Modern mobile application built using <strong>Flutter &amp; Dart</strong> with responsive UI for Android &amp; iOS. 
+                Incorporates <strong>Provider</strong> state management, SQLite local caching, streak analytics, 
+                smooth customized animations, and dark/light adaptive theming.
+              </p>
+              <div class="project-tech-stack">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Provider</span>
+                <span>SQLite</span>
+                <span>Material 3</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-proj-detail" data-project="habitpulse">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-proj-link" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#contact" class="btn-proj-link live" title="Request APK / Demo">
+                  <i class="fa-solid fa-mobile-screen"></i> APK
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Python Engineering Academic Project -->
+          <article class="project-card" data-proj-category="python">
+            <div class="project-window-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="project-type-tag">Python &amp; ECE</span>
+            </div>
+            <div class="project-thumbnail-wrapper">
+              <div class="project-mockup python-mockup">
+                <div class="mockup-code-header">
+                  <i class="fa-brands fa-python"></i>
+                  <span>analytics_engine.py</span>
+                </div>
+                <div class="mockup-code-body">
+                  <code>def evaluate_system_telemetry(data_stream):<br>&nbsp;&nbsp;&nbsp;&nbsp;return compute_optimal_metrics(data_stream)</code>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-top">
+                <span class="project-year">2025</span>
+                <span class="featured-badge">Academic Core</span>
+              </div>
+              <h3 class="project-title">Smart Engineering Telemetry &amp; Analysis System</h3>
+              <p class="project-desc">
+                Practical engineering academic project applying <strong>Python programming</strong> and core electronics principles. 
+                Focused on logical implementation, automated signal processing, sensor data validation, 
+                and effective project execution for real-time monitoring.
+              </p>
+              <div class="project-tech-stack">
+                <span>Python 3</span>
+                <span>Data Analysis</span>
+                <span>Signal Processing</span>
+                <span>OOPs</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-proj-detail" data-project="telemetry">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-proj-link" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#contact" class="btn-proj-link live" title="View Documentation">
+                  <i class="fa-solid fa-file-lines"></i> Docs
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Interactive Code Learning & Training Sandbox -->
+          <article class="project-card" data-proj-category="fullstack">
+            <div class="project-window-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="project-type-tag">Web &amp; Training</span>
+            </div>
+            <div class="project-thumbnail-wrapper">
+              <div class="project-mockup web-mockup">
+                <div class="mockup-code-header">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                  <span>CodeCraft-Trainer</span>
+                </div>
+                <div class="mockup-code-body">
+                  <code>&lt;interactive-terminal /&gt;<br>// Live student evaluation &amp; feedback</code>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-top">
+                <span class="project-year">2026</span>
+                <span class="featured-badge">Education</span>
+              </div>
+              <h3 class="project-title">CodeCraft - Interactive Coding Assessment Sandbox</h3>
+              <p class="project-desc">
+                An interactive web-based educational portal designed to facilitate technical training sessions. 
+                Allows students to practice Python and Java problems in real time with syntax validation, 
+                code walkthrough hints, and performance scoring.
+              </p>
+              <div class="project-tech-stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Java Backend</span>
+                <span>Training Pedagogy</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-proj-detail" data-project="codecraft">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-proj-link" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#contact" class="btn-proj-link live" title="Live Preview">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Flutter Finance & Expense Flow -->
+          <article class="project-card" data-proj-category="flutter">
+            <div class="project-window-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="project-type-tag">Flutter &amp; Dart</span>
+            </div>
+            <div class="project-thumbnail-wrapper">
+              <div class="project-mockup finance-mockup">
+                <div class="mockup-phone-frame">
+                  <div class="phone-screen">
+                    <div class="phone-card-preview">
+                      <i class="fa-solid fa-wallet text-emerald"></i>
+                      <span>Budget: ₹45,200</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-top">
+                <span class="project-year">2026</span>
+                <span class="featured-badge">Mobile App</span>
+              </div>
+              <h3 class="project-title">SpendSync - Smart Expense &amp; Budget Manager</h3>
+              <p class="project-desc">
+                Feature-rich cross-platform personal finance manager developed with <strong>Flutter</strong>. 
+                Features interactive expense graphs, category-wise budget caps, recurring transaction reminders, 
+                and offline-first data synchronization.
+              </p>
+              <div class="project-tech-stack">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Charts Flutter</span>
+                <span>Hive DB</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-proj-detail" data-project="spendsync">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-proj-link" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#contact" class="btn-proj-link live" title="Request APK">
+                  <i class="fa-solid fa-mobile-screen"></i> APK
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Python Automated Grading & Evaluator -->
+          <article class="project-card" data-proj-category="python">
+            <div class="project-window-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="project-type-tag">Python &amp; Automation</span>
+            </div>
+            <div class="project-thumbnail-wrapper">
+              <div class="project-mockup pyauto-mockup">
+                <div class="mockup-code-header">
+                  <i class="fa-solid fa-robot"></i>
+                  <span>auto_grader.py</span>
+                </div>
+                <div class="mockup-code-body">
+                  <code>for submission in batch:<br>&nbsp;&nbsp;&nbsp;&nbsp;score = run_test_cases(submission)</code>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-top">
+                <span class="project-year">2025</span>
+                <span class="featured-badge">Automation</span>
+              </div>
+              <h3 class="project-title">PyGrader - Automated Code Evaluation Pipeline</h3>
+              <p class="project-desc">
+                An automated Python script pipeline engineered to parse, test, and benchmark programming submissions. 
+                Utilizes subprocess sandboxing, execution time monitoring, edge case scoring, 
+                and automated PDF summary generation for trainers.
+              </p>
+              <div class="project-tech-stack">
+                <span>Python</span>
+                <span>Subprocess</span>
+                <span>Unit Testing</span>
+                <span>File I/O</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-proj-detail" data-project="pygrader">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-proj-link" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#contact" class="btn-proj-link live" title="Docs">
+                  <i class="fa-solid fa-file-code"></i> Docs
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & ACHIEVEMENTS SECTION -->
+    <section class="section cert-section" id="certifications">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">// 04. VALIDATED EXPERTISE</span>
+          <h2 class="section-title">Certifications &amp; <span class="text-accent">Honors</span></h2>
+          <div class="section-line center"></div>
+          <p class="section-subtitle">
+            Formal recognitions, academic excellence milestones, and verified domain credentials.
+          </p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1: Academic Excellence -->
+          <div class="cert-card">
+            <div class="cert-icon-ribbon">
+              <i class="fa-solid fa-medal"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Adichunchanagiri Institute of Technology</span>
+              <h3 class="cert-title">Academic Merit &amp; High CGPA (8.1)</h3>
+              <p class="cert-text">
+                Recognized for sustained academic excellence in Electronics &amp; Communication Engineering, 
+                maintaining a competitive 8.1 CGPA while actively pursuing advanced full-stack software development.
+              </p>
+              <div class="cert-tags">
+                <span>AIT Merit</span>
+                <span>CGPA 8.1</span>
+                <span>Academic Honor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 2: Java Full Stack Specialization -->
+          <div class="cert-card">
+            <div class="cert-icon-ribbon java-cert">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Software Development Specialization</span>
+              <h3 class="cert-title">Java Full Stack Development Professional</h3>
+              <p class="cert-text">
+                Intensive certification covering Core Java, Object-Oriented Design, Collections, 
+                Spring Boot architecture, Hibernate ORM, and Relational Database engineering.
+              </p>
+              <div class="cert-tags">
+                <span>Java 17</span>
+                <span>Spring Boot</span>
+                <span>MySQL</span>
+                <span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 3: Flutter Cross-Platform -->
+          <div class="cert-card">
+            <div class="cert-icon-ribbon flutter-cert">
+              <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Mobile Engineering Track</span>
+              <h3 class="cert-title">Flutter &amp; Dart Mobile App Development</h3>
+              <p class="cert-text">
+                Hands-on credential in cross-platform mobile engineering: widget lifecycle, 
+                asynchronous Dart programming, Provider state management, and modern responsive UI.
+              </p>
+              <div class="cert-tags">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>State Management</span>
+                <span>Android/iOS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 4: Python Programming & Logic -->
+          <div class="cert-card">
+            <div class="cert-icon-ribbon python-cert">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Algorithmic Problem Solving</span>
+              <h3 class="cert-title">Python Programming &amp; Logic Implementation</h3>
+              <p class="cert-text">
+                Practical credential in Python programming, modular architecture, data structures, 
+                and engineering project execution with algorithmic efficiency.
+              </p>
+              <div class="cert-tags">
+                <span>Python</span>
+                <span>Data Structures</span>
+                <span>Algorithms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 5: Technical Trainer & Pedagogy -->
+          <div class="cert-card">
+            <div class="cert-icon-ribbon trainer-cert">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Mentorship &amp; Education</span>
+              <h3 class="cert-title">Technical Trainer &amp; Facilitation Excellence</h3>
+              <p class="cert-text">
+                Demonstrated aptitude in conducting technical coaching, simplifying foundational software concepts, 
+                and guiding junior developers through practical code implementation.
+              </p>
+              <div class="cert-tags">
+                <span>Technical Mentorship</span>
+                <span>Code Walkthroughs</span>
+                <span>Pedagogy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 6: Modern Web Engineering -->
+          <div class="cert-card">
+            <div class="cert-icon-ribbon web-cert">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Frontend Fundamentals</span>
+              <h3 class="cert-title">Responsive Web Design &amp; Modern UI/UX</h3>
+              <p class="cert-text">
+                Comprehensive training in HTML5 semantic structure, CSS3 responsive grid/flex systems, 
+                accessible web practices, and cross-browser modern interface development.
+              </p>
+              <div class="cert-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME CALLOUT BANNER -->
+    <section class="resume-cta-section">
+      <div class="container">
+        <div class="resume-cta-card">
+          <div class="cta-text-content">
+            <span class="cta-badge"><i class="fa-solid fa-file-lines"></i> Official Resume Available</span>
+            <h2 class="cta-title">Interested in my full background and credentials?</h2>
+            <p class="cta-desc">
+              Download my comprehensive resume detailing academic achievements (8.1 CGPA), technical stack, 
+              full-stack project milestones, and technical training facilitation experience.
+            </p>
+          </div>
+          <div class="cta-btn-wrapper">
+            <a href="assets/Ashitha_D_Gowda_Resume.pdf" download="Ashitha_D_Gowda_Resume.pdf" class="btn btn-primary-emerald" id="bannerResumeBtn">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+              <span>Download Official Resume</span>
+            </a>
+            <a href="#contact" class="btn btn-outline-white">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Direct Inquiries</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">// 05. REACH OUT</span>
+          <h2 class="section-title">Get In <span class="text-accent">Touch</span></h2>
+          <div class="section-line center"></div>
+          <p class="section-subtitle">
+            Whether you have a full-time software developer opening, need a Flutter application, 
+            or want to schedule a technical training workshop, my inbox is always open!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Details -->
+          <div class="contact-info-panel">
+            <h3 class="info-panel-title">Let's talk code, careers &amp; opportunities</h3>
+            <p class="info-panel-desc">
+              I am actively interviewing for <strong>Java Full Stack Developer</strong>, <strong>Flutter Developer</strong>, 
+              and <strong>Technical Trainer</strong> positions. Feel free to contact me directly via email, phone, or WhatsApp.
+            </p>
+
+            <div class="contact-cards-stack">
+              <!-- Email Card -->
+              <div class="contact-method-card">
+                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Direct Email</span>
+                  <a href="mailto:ashithadgowda102@gmail.com" class="method-value">ashithadgowda102@gmail.com</a>
+                </div>
+                <button class="copy-pill-btn" data-copy="ashithadgowda102@gmail.com" title="Copy email address">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="contact-method-card">
+                <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Phone &amp; Mobile</span>
+                  <a href="tel:+918792539013" class="method-value">+91 8792539013</a>
+                </div>
+                <button class="copy-pill-btn" data-copy="8792539013" title="Copy phone number">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- WhatsApp Card -->
+              <div class="contact-method-card">
+                <div class="method-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Instant Messaging</span>
+                  <a href="https://wa.me/918792539013" target="_blank" rel="noopener noreferrer" class="method-value">Chat on WhatsApp</a>
+                </div>
+                <a href="https://wa.me/918792539013" target="_blank" rel="noopener noreferrer" class="chat-pill-btn" title="Open WhatsApp Chat">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-method-card">
+                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Current Base</span>
+                  <span class="method-value">Chikkamagaluru, Karnataka, India</span>
+                </div>
+                <span class="location-badge">Open to Relocation / Remote</span>
+              </div>
+            </div>
+
+            <!-- Social Links Group -->
+            <div class="contact-socials-box">
+              <span class="socials-box-title">Connect with me online:</span>
+              <div class="social-links-row">
+                <a href="mailto:ashithadgowda102@gmail.com" class="social-circle" title="Email Ashitha" aria-label="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-circle" title="GitHub" aria-label="GitHub Profile">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle" title="LinkedIn" aria-label="LinkedIn Profile">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/918792539013" target="_blank" rel="noopener noreferrer" class="social-circle" title="WhatsApp" aria-label="WhatsApp Contact">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Panel -->
+          <div class="contact-form-panel">
+            <div class="form-card-container">
+              <div class="terminal-bar form-header-bar">
+                <div class="terminal-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="terminal-title">send_message.sh</div>
+              </div>
+
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="userName" class="form-label">
+                    <span class="label-code">//</span> Your Full Name <span class="required">*</span>
+                  </label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="userName" name="name" class="form-control" placeholder="e.g. John Doe" required autocomplete="name">
+                  </div>
+                  <span class="error-msg" id="nameError">Please enter your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="userEmail" class="form-label">
+                    <span class="label-code">//</span> Your Email Address <span class="required">*</span>
+                  </label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="userEmail" name="email" class="form-control" placeholder="e.g. name@example.com" required autocomplete="email">
+                  </div>
+                  <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="userRole" class="form-label">
+                    <span class="label-code">//</span> Inquiry Type
+                  </label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-briefcase input-icon"></i>
+                    <select id="userRole" name="role" class="form-control">
+                      <option value="Full-Time Hiring">Software Developer Role / Full-time Opportunity</option>
+                      <option value="Flutter Project">Flutter Mobile App Development</option>
+                      <option value="Technical Training">Technical Training / Workshop Facilitation</option>
+                      <option value="Mentorship & Collaboration">General Collaboration / Mentorship</option>
+                      <option value="Other">Other Inquiry</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="userMessage" class="form-label">
+                    <span class="label-code">//</span> Your Message <span class="required">*</span>
+                  </label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-comment-dots input-icon textarea-icon"></i>
+                    <textarea id="userMessage" name="message" class="form-control textarea" rows="5" placeholder="Share project specifications, job description, or message..." required></textarea>
+                  </div>
+                  <span class="error-msg" id="messageError">Please provide your message (at least 10 characters).</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary-emerald submit-btn" id="submitBtn">
+                  <span class="btn-text">Transmit Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <a href="#home" class="footer-brand">
+          <span class="brand-code">&lt;</span>
+          <span class="brand-name">Ashitha</span>
+          <span class="brand-dot">.</span>
+          <span class="brand-title">dev</span>
+          <span class="brand-code">/&gt;</span>
+        </a>
+        <p class="footer-tagline">
+          Crafting reliable digital experiences with Java, Flutter, and Python. Training engineers for tomorrow.
+        </p>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="currentYear">2026</span> <strong>Ashitha D. Gowda</strong>. Built with precision using modern HTML5, CSS3 &amp; Vanilla JavaScript.
+        </p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Button with Circular SVG Progress Ring -->
+  <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page" title="Scroll to Top">
+    <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+      <circle class="progress-ring-bg" stroke="rgba(255,255,255,0.1)" stroke-width="3" fill="transparent" r="20" cx="23" cy="23" />
+      <circle id="progressRingCircle" class="progress-ring-circle" stroke="#10b981" stroke-width="3" stroke-dasharray="125.66" stroke-dashoffset="125.66" fill="transparent" r="20" cx="23" cy="23" />
+    </svg>
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Interactive Project Details Modal -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-badge-wrapper">
+            <span class="modal-category-badge" id="modalCategory">Category</span>
+          </div>
+          <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title" id="modalTitle">Project Title</h3>
+          <p class="modal-full-desc" id="modalDesc">Detailed description...</p>
+          
+          <div class="modal-section-block">
+            <h4 class="modal-subtitle"><i class="fa-solid fa-list-check"></i> Key Architectural Features</h4>
+            <ul class="modal-feature-list" id="modalFeatures">
+              <!-- Populated dynamically via JS -->
+            </ul>
+          </div>
+
+          <div class="modal-section-block">
+            <h4 class="modal-subtitle"><i class="fa-solid fa-microchip"></i> Technologies Utilized</h4>
+            <div class="modal-tech-pills" id="modalTech">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white" id="modalGithubBtn">
+            <i class="fa-brands fa-github"></i> Repository
+          </a>
+          <a href="#contact" class="btn btn-primary-emerald" id="modalLiveBtn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
